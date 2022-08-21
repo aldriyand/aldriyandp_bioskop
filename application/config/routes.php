@@ -49,6 +49,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['movie/(:num)'] = 'movie/index/$1';
+$route['book-ticket/(:num)'] = 'Book/index/$1';
+$route['my-tickets'] = 'Tickets/index';
+$route['process']['post'] = 'Book/process';
+$route['update-status/(:num)']['post'] = 'Book/update_status/$1';
+
+$route['auth/signin'] = 'auth/signin';
+$route['auth/signup'] = 'auth/signup';
+$route['auth/signout'] = 'auth/signout';
+
+$route['admin/dashboard'] = 'administrator/dashboard';
+$route['admin/movies'] = 'administrator/movies';
+$route['admin/movies/add'] = 'administrator/movies/add';
+$route['admin/movies/create']['post'] = 'administrator/movies/create';
+$route['admin/movies/edit/(:num)'] = 'administrator/movies/edit/$1';
+$route['admin/movies/update']['post'] = 'administrator/movies/update';
+$route['admin/movies/delete/(:num)'] = 'administrator/movies/delete/$1';
+$route['admin/cinemas'] = 'administrator/cinemas';
+$route['admin/cinemas/add'] = 'administrator/cinemas/add';
+$route['admin/cinemas/create']['post'] = 'administrator/cinemas/create';
+$route['admin/cinemas/edit/(:num)'] = 'administrator/cinemas/edit/$1';
+$route['admin/cinemas/update']['post'] = 'administrator/cinemas/update';
+$route['admin/cinemas/delete/(:num)'] = 'administrator/cinemas/delete/$1';
+$route['admin/schedules'] = 'administrator/schedules';
+$route['admin/schedules/add'] = 'administrator/schedules/add';
+$route['admin/schedules/create']['post'] = 'administrator/schedules/create';
+$route['admin/schedules/edit/(:num)'] = 'administrator/schedules/edit/$1';
+$route['admin/schedules/update']['post'] = 'administrator/schedules/update';
+$route['admin/schedules/delete/(:num)'] = 'administrator/schedules/delete/$1';
+$route['admin/orders'] = 'administrator/orders';
+$route['admin/orders/edit/(:num)'] = 'administrator/orders/edit/$1';
+$route['admin/orders/verify/(:num)'] = 'administrator/orders/verify/$1';
+$route['admin/orders/delete/(:num)'] = 'administrator/orders/delete/$1';
