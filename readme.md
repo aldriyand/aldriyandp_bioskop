@@ -13,7 +13,7 @@ issues, as well as missing features.
 ## Installation
 
 - Clone this repository and place to your workspace
-- Create MySQL database and import `database.sql` into your database
+- Create MySQL database and import `moviely_dev.sql` into your database
 - Modify `application\config\database.php` according to your MySQL database config
 - Run server
 
