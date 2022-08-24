@@ -23,6 +23,18 @@ class Tayangan_model extends CI_Model
             ->result();
     }
 
+    public function get_list_where($condition)
+    {
+        return $this->db->select('t.id, t.id_bioskop, t.id_film, t.kd_tayang, t.judul_film, b.nama_bioskop, t.tgl_tayang, t.jumlah_kursi, t.is_active, t.ticket_price')
+            ->from($this->table_name . ' t')
+            ->join('film f', 't.id_film = f.id')
+            ->join('bioskop b', 't.id_bioskop = b.id')
+            ->where($condition)
+            ->order_by('t.tgl_tayang', 'asc')
+            ->get()
+            ->result();
+    }
+
     public function get_count()
     {
         return $this->db->count_all($this->table_name);

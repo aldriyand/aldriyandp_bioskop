@@ -17,7 +17,7 @@ class Movie extends CI_Controller
 
         $data['movie'] = $this->film_model->get_detail($id);
         $data['cinema'] = $this->bioskop_model->get_list_where(['kota' => $kota]);
-        $data['schedule'] = $this->tayangan_model->get_list();
+        $data['schedule'] = $this->tayangan_model->get_list_where(['f.id' => $id, 'b.kota' => $kota]);
         $this->template->load('main/template', 'main/movie_detail', $data);
     }
 }

@@ -3,7 +3,7 @@
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-            <h2>Events</h2>
+            <h2>Featured</h2>
             <p>Latest Movies</p>
         </div>
 
@@ -48,7 +48,7 @@
 
         <div class="row">
             <?php foreach ($playing as $v) : ?>
-                <a class="col-lg-4 col-md-6 mb-5" href="<?php echo base_url(); ?>movie/<?= $v->id ?>?kota=malang">
+                <a class="col-lg-4 col-md-6 mb-5" href="<?php echo base_url(); ?>movie/<?= $v->id ?>">
                     <div class="member" data-aos="zoom-in" data-aos-delay="100">
                         <img src="<?php echo base_url(); ?>uploads/movies/<?= $v->image_path ?>" class="img-fluid" alt="">
                         <div class="member-info">
