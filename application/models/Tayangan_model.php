@@ -18,6 +18,7 @@ class Tayangan_model extends CI_Model
             ->from($this->table_name . ' t')
             ->join('film f', 't.id_film = f.id')
             ->join('bioskop b', 't.id_bioskop = b.id')
+            ->order_by('t.tgl_tayang', 'asc')
             ->get()
             ->result();
     }

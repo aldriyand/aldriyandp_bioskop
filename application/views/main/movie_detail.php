@@ -1,3 +1,4 @@
+<script src="<?php echo base_url(); ?>assets/main/js/jquery-1.11.0.min.js"></script>
 <section id="movie-detail" class="movie-detail" style="margin-top: 6%">
     <div class="container" data-aos="fade-up">
 
@@ -53,8 +54,18 @@
                 </button> -->
             </div>
         </div>
+        <hr>
+        <h4 class="mb-3">Tiket Tersedia</h4>
         <div class="row">
-            <table class="table table-sm text-white">
+            <div class="col-sm-12 col-lg-6 mb-3">
+                <select name="kota" id="kota" class="form-select">
+                    <option value="">Pilih kota</option>
+                    <option value="malang">Malang</option>
+                    <option value="surabaya">Surabaya</option>
+                    <option value="kediri">Kediri</option>
+                </select>
+            </div>
+            <table class="table table-sm table-borderless text-white">
                 <?php foreach ($cinema as $c) : ?>
                     <tr>
                         <td><?= $c->nama_bioskop ?></td>
@@ -73,3 +84,11 @@
         </div>
     </div>
 </section>
+<script>
+    $('#kota').on('change', function() {
+        if ($('#kota option:selected').val() != '') {
+            let kota = $('#kota option:selected').val();
+            window.location.href = '<?= base_url() . 'movie/' . $movie->id . '?kota=' ?>' + kota
+        }
+    })
+</script>

@@ -27,7 +27,6 @@
 
     <!-- Template Main CSS File -->
     <link href="<?php echo base_url(); ?>assets/main/css/style.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/main/css/style2.css" rel="stylesheet" type="text/css" media="all" />
 
     <!-- =======================================================
   * Template Name: Restaurantly - v3.8.0
@@ -171,8 +170,6 @@
 
     <!-- Template Main JS File -->
     <script src="<?php echo base_url(); ?>assets/main/js/main.js"></script>
-    <!-- <script src="<?php echo base_url(); ?>assets/main/js/jquery-1.11.0.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/main/js/jquery.seat-charts.js"></script> -->
 
 </body>
 

@@ -31,15 +31,19 @@ class Auth extends CI_Controller
                 $this->session->set_userdata($sess);
 
                 if ($user->level == 'admin') {
-                    redirect('administrator/dashboard', 'refresh');
+                    redirect(base_url() . 'administrator/dashboard', 'refresh');
+                    exit;
                 }
                 if ($src == 'movie_detail') {
                     if ($book == 'yes') {
-                        redirect('book-ticket/' . $movie_id, 'refresh');
+                        redirect(base_url() . 'book-ticket/' . $movie_id);
+                        exit;
                     }
-                    redirect('movie/' . $movie_id, 'refresh');
+                    redirect(base_url() . 'movie/' . $movie_id, 'refresh');
+                    exit;
                 }
-                redirect('/', 'refresh');
+                redirect(base_url(), 'refresh');
+                exit;
             }
             echo $this->session->set_flashdata('message', '<div class="text-danger"><center>User not found.</center></div>');
         }
@@ -57,9 +61,9 @@ class Auth extends CI_Controller
             redirect('/', 'refresh');
         }
 
-        $data['src'] = !empty($this->input->get('src')) ? $this->input->get('src') : '';
-        $data['movie_id'] = !empty($this->input->get('movie')) ? $this->input->get('movie') : '';
-        $data['book'] = !empty($this->input->get('book')) ? $this->input->get('book') : '';
+        $data['src'] = $src;
+        $data['movie_id'] = $movie_id;
+        $data['book'] = $book;
         $this->load->view('auth/login', $data);
     }
 

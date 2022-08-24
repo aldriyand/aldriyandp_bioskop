@@ -200,7 +200,7 @@ span.seatCharts-legendDescription {
 	/*-- w3layouts --*/
     -ms-transition: 0.5s all;
 }
-#selected-seats {
+/* #selected-seats {
 	max-height: 84px;
 	overflow-y: auto;
 	overflow-x: none;
@@ -217,7 +217,7 @@ span.seatCharts-legendDescription {
     font-weight: 600;
     padding: 6px 11px;
     width: 50%;
-	}
+	} */
 .scrollbar {
     overflow-y: scroll;
 }

@@ -23,7 +23,7 @@
                                 <p class="fst-italic">
                                     <?= $v->synopsys ?>
                                 </p>
-                                <a href="<?php echo base_url(); ?>movie/<?= $v->id ?>?kota=malang" class="btn btn-success" style="border-radius: 50px;">
+                                <a href="<?php echo base_url(); ?>movie/<?= $v->id ?>" class="btn btn-success mt-3" style="border-radius: 50px;">
                                     Lihat Detail
                                 </a>
                             </div>

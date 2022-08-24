@@ -57,6 +57,7 @@ $route['movie/(:num)'] = 'movie/index/$1';
 $route['book-ticket/(:num)'] = 'Book/index/$1';
 $route['my-tickets'] = 'Tickets/index';
 $route['process']['post'] = 'Book/process';
+$route['pay/(:any)'] = 'Book/pay/$1';
 $route['update-status/(:num)']['post'] = 'Book/update_status/$1';
 
 $route['auth/signin'] = 'auth/signin';

@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="m-sm-4">
                                     <?php echo $this->session->flashdata('message'); ?>
-                                    <form action="<?php echo base_url() ?>auth/signin?src=<?= $src ?? '' ?>&movie=<?= $movie_id ?? '' ?>&book<?= $book ?>" method="post">
+                                    <form action="<?php echo base_url() ?>auth/signin?src=<?= $src ?? '' ?>&movie_id=<?= $movie_id ?? '' ?>&book=<?= $book ?>" method="post">
                                         <div class="mb-3">
                                             <label class="form-label">Email</label>
                                             <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />

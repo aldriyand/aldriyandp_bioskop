@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card bg-dark">
-                    <table class="table table-striped text-white">
+                    <table class="table table-striped table-borderless text-white">
                         <tr>
                             <th class="text-white">Kode Tiket</th>
                             <th class="text-white">Status</th>
